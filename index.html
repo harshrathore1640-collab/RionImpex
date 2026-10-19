@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rion Impex - Premium Bath & Wellness Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fdfbf7',
+                            100: '#f9f3e5',
+                            500: '#d4af37',
+                            600: '#b89728',
+                            700: '#96781d',
+                        },
+                        darkslate: {
+                            800: '#1e252b',
+                            900: '#13181c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(19, 24, 28, 0.7), rgba(19, 24, 28, 0.7)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-darkslate-900 text-gray-300 text-xs sm:text-sm py-2 px-4 sm:px-8 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span><i class="fas fa-globe text-gold-500 mr-2"></i>Global Exporter & Supplier</span>
+                <span class="hidden md:inline"><i class="fas fa-map-marker-alt text-gold-500 mr-2"></i>Excellence in Sanitaryware & Wellness</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:8238226101" class="hover:text-gold-500 transition"><i class="fas fa-phone-alt text-gold-500 mr-2"></i>+91 82382 26101</a>
+                <a href="mailto:info@rionimpex.com" class="hover:text-gold-500 transition"><i class="fas fa-envelope text-gold-500 mr-2"></i>info@rionimpex.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-darkslate-900 text-gold-500 p-2.5 rounded-xl font-serif font-bold text-xl tracking-wider shadow-md">
+                    RI
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-serif font-bold text-darkslate-900 tracking-wide block leading-tight">RION IMPEX</span>
+                    <span class="text-[10px] sm:text-xs text-gold-600 font-semibold uppercase tracking-widest block">Bath & Wellness</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-700">
+                <a href="#home" class="hover:text-gold-600 transition">Home</a>
+                <a href="#about" class="hover:text-gold-600 transition">About Us</a>
+                <a href="#products" class="hover:text-gold-600 transition">Products</a>
+                <a href="#quality" class="hover:text-gold-600 transition">Quality Assurance</a>
+                <a href="#global" class="hover:text-gold-600 transition">Global Export</a>
+                <a href="#contact" class="hover:text-gold-600 transition">Contact Us</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20am%20interested%20in%20your%20bath%20and%20wellness%20products." target="_blank" class="bg-darkslate-900 hover:bg-gold-600 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 shadow-md flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg text-green-400"></i> Enquire Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-gray-100">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#home" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">Home</a>
+            <a href="#about" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">About Us</a>
+            <a href="#products" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">Products</a>
+            <a href="#quality" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">Quality Assurance</a>
+            <a href="#global" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">Global Export</a>
+            <a href="#contact" class="block text-gray-700 font-medium py-1 hover:text-gold-600 mobile-link">Contact Us</a>
+            <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+                <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20am%20interested%20in%20your%20products." target="_blank" class="bg-green-600 text-white text-center py-2.5 rounded-xl font-medium text-sm flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[85vh] flex items-center text-white relative py-20 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-gold-500/20 text-gold-400 border border-gold-500/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
+                    <i class="fas fa-crown"></i> Luxury Redefined
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-serif font-bold tracking-tight leading-tight">
+                    Crafting Elegance in <span class="text-gold-500 italic">Bath & Wellness</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                    Rion Impex is a premier global exporter and supplier of exquisite sanitaryware, advanced CP fittings, indulgent shower systems, and luxurious bath wellness solutions.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#products" class="bg-gold-500 hover:bg-gold-600 text-darkslate-900 font-semibold px-8 py-3.5 rounded-xl transition duration-300 shadow-lg flex items-center gap-2">
+                        Explore Collection <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20would%20like%20to%20get%20a%20catalog." target="_blank" class="bg-white/10 hover:bg-white/25 border border-white/20 text-white font-semibold px-8 py-3.5 rounded-xl transition duration-300 backdrop-blur-sm flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-green-400 text-lg"></i> Get Catalog
+                    </a>
+                </div>
+                <!-- Trust Badges -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 mt-8">
+                    <div>
+                        <h4 class="text-2xl sm:text-3xl font-bold font-serif text-gold-400">100%</h4>
+                        <p class="text-xs text-gray-400">Quality Assured</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl sm:text-3xl font-bold font-serif text-gold-400">Global</h4>
+                        <p class="text-xs text-gray-400">Export Network</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl sm:text-3xl font-bold font-serif text-gold-400">Premium</h4>
+                        <p class="text-xs text-gray-400">Finishes & Design</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Image Collage -->
+            <div class="hidden lg:grid grid-cols-2 gap-4 relative">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80" alt="Luxury Bathroom" class="rounded-2xl shadow-2xl h-64 w-full object-cover border border-white/10 transform hover:scale-[1.02] transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80" alt="CP Fittings" class="rounded-2xl shadow-2xl h-48 w-full object-cover border border-white/10 transform hover:scale-[1.02] transition duration-500">
+                </div>
+                <div class="space-y-4 pt-8">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Sanitaryware" class="rounded-2xl shadow-2xl h-48 w-full object-cover border border-white/10 transform hover:scale-[1.02] transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="Shower Systems" class="rounded-2xl shadow-2xl h-64 w-full object-cover border border-white/10 transform hover:scale-[1.02] transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-gold-100 rounded-3xl -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="About Rion Impex" class="rounded-3xl shadow-xl w-full h-[450px] object-cover">
+                    <div class="absolute bottom-6 right-6 bg-darkslate-900 text-white p-6 rounded-2xl shadow-2xl border border-gold-500/30 max-w-xs">
+                        <p class="font-serif italic text-gold-400 text-lg mb-2">"Uncompromising quality & timeless design for modern living spaces."</p>
+                        <span class="text-xs uppercase tracking-wider text-gray-400">- Rion Impex Leadership</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-gold-100 text-gold-700 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fas fa-award"></i> About Rion Impex
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkslate-900 tracking-tight leading-snug">
+                        Setting Global Benchmarks in Bathroom Aesthetics & Engineering
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed font-light text-base sm:text-lg">
+                        Based with a vision for architectural excellence, <strong>Rion Impex</strong> has emerged as a trusted global exporter, importer, and supplier of world-class bath and wellness products. We curate collections that seamlessly combine state-of-the-art functionality with breathtaking design.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        From ultra-modern sanitaryware lines to precision-crafted CP fittings and rejuvenating shower systems, our products adorn residential villas, luxury hotels, and commercial establishments across international borders.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-100 text-gold-600 p-3 rounded-xl">
+                                <i class="fas fa-globe-americas text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-darkslate-900 mb-1">Global Exporter</h4>
+                                <p class="text-xs text-gray-500">Serving clients worldwide with reliable logistics.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-100 text-gold-600 p-3 rounded-xl">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-darkslate-900 mb-1">Superior Durability</h4>
+                                <p class="text-xs text-gray-500">Tested for longevity, rust resistance & perfection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="products" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest bg-gold-100 px-3.5 py-1 rounded-full">Our Collections</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkslate-900">Explore Our Premium Categories</h2>
+                <p class="text-gray-600 font-light">Discover superior craftsmanship designed to transform every bathroom into a sanctuary of wellness and luxury.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Premium Bath & Wellness -->
+                <div class="bg-white rounded-2xl overflow-hidden custom-shadow hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Premium Bath and Wellness" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkslate-900/80 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-4 right-4 bg-gold-500 text-darkslate-900 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Luxury</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-darkslate-900">Bath & Wellness</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed">
+                            Luxurious bathtubs, freestanding basins, and wellness spas engineered for ultimate relaxation and aesthetic poise.
+                        </p>
+                        <div class="pt-4 flex items-center justify-between border-t border-gray-100">
+                            <a href="https://wa.me/918238226101?text=I%20want%20to%20know%20more%20about%20Premium%20Bath%20and%20Wellness%20products." target="_blank" class="text-gold-600 font-semibold text-sm hover:text-gold-700 flex items-center gap-1">
+                                Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sanitaryware -->
+                <div class="bg-white rounded-2xl overflow-hidden custom-shadow hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80" alt="Sanitaryware" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkslate-900/80 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-4 right-4 bg-gold-500 text-darkslate-900 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Modern</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-darkslate-900">Sanitaryware</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed">
+                            Pristine wall-hung closets, sleek water closets, wash basins, and urinals crafted with high-gloss hygienic ceramic glazing.
+                        </p>
+                        <div class="pt-4 flex items-center justify-between border-t border-gray-100">
+                            <a href="https://wa.me/918238226101?text=I%20want%20to%20know%20more%20about%20Sanitaryware%20products." target="_blank" class="text-gold-600 font-semibold text-sm hover:text-gold-700 flex items-center gap-1">
+                                Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: CP Fittings -->
+                <div class="bg-white rounded-2xl overflow-hidden custom-shadow hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80" alt="CP Fittings" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkslate-900/80 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-4 right-4 bg-gold-500 text-darkslate-900 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Precision</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-darkslate-900">CP Fittings</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed">
+                            Durable brass faucets, basin mixers, diverters, and spouts featuring flawless chrome plating and smooth operational cartridges.
+                        </p>
+                        <div class="pt-4 flex items-center justify-between border-t border-gray-100">
+                            <a href="https://wa.me/918238226101?text=I%20want%20to%20know%20more%20about%20CP%20Fittings." target="_blank" class="text-gold-600 font-semibold text-sm hover:text-gold-700 flex items-center gap-1">
+                                Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Shower Systems -->
+                <div class="bg-white rounded-2xl overflow-hidden custom-shadow hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="Shower Systems" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkslate-900/80 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-4 right-4 bg-gold-500 text-darkslate-900 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Relaxing</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-darkslate-900">Shower Systems</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed">
+                            Rain showers, thermostatic panels, body massage jets, and handheld shower sets designed for an invigorating spa experience.
+                        </p>
+                        <div class="pt-4 flex items-center justify-between border-t border-gray-100">
+                            <a href="https://wa.me/918238226101?text=I%20want%20to%20know%20more%20about%20Shower%20Systems." target="_blank" class="text-gold-600 font-semibold text-sm hover:text-gold-700 flex items-center gap-1">
+                                Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                            </a>
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catalogue Banner -->
+            <div class="mt-16 bg-darkslate-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="space-y-3 max-w-2xl z-10">
+                    <span class="text-gold-400 font-semibold uppercase tracking-wider text-xs bg-gold-500/20 px-3 py-1 rounded-full">Wholesale & Export</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold">Looking for Custom Orders or Bulk Supply?</h3>
+                    <p class="text-gray-300 font-light text-sm sm:text-base">We cater to architects, builders, importers, and distributors globally with customized packaging and competitive pricing.</p>
+                </div>
+                <div class="z-10 flex flex-wrap gap-4">
+                    <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20am%20interested%20in%20bulk%20orders%20and%20catalogs." target="_blank" class="bg-gold-500 hover:bg-gold-600 text-darkslate-900 font-semibold px-8 py-4 rounded-xl transition shadow-lg flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Chat on WhatsApp
+                    </a>
+                    <a href="tel:8238226101" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition border border-white/20 flex items-center gap-2">
+                        <i class="fas fa-phone-alt"></i> Call Us Directly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Quality Assurance -->
+    <section id="quality" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest bg-gold-100 px-3.5 py-1 rounded-full">Excellence Guaranteed</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkslate-900">Why Choose Rion Impex?</h2>
+                <p class="text-gray-600 font-light">Our unwavering commitment to quality, durability, and customer satisfaction sets us apart in the global market.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-gold-500/50 transition duration-300 space-y-4 group">
+                    <div class="w-16 h-16 bg-gold-100 text-gold-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-gold-500 group-hover:text-white transition duration-300">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-darkslate-900">Uncompromising Quality</h3>
+                    <p class="text-gray-600 font-light text-sm leading-relaxed">
+                        Every piece undergoes rigorous quality control checks for pressure resistance, smooth finish, ceramic purity, and lasting durability.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-gold-500/50 transition duration-300 space-y-4 group">
+                    <div class="w-16 h-16 bg-gold-100 text-gold-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-gold-500 group-hover:text-white transition duration-300">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-darkslate-900">Trusted Global Partner</h3>
+                    <p class="text-gray-600 font-light text-sm leading-relaxed">
+                        We build lasting relationships with international importers, contractors, and distributors through transparent communication and timely delivery.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-gold-500/50 transition duration-300 space-y-4 group">
+                    <div class="w-16 h-16 bg-gold-100 text-gold-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-gold-500 group-hover:text-white transition duration-300">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-darkslate-900">Secure Export Packaging</h3>
+                    <p class="text-gray-600 font-light text-sm leading-relaxed">
+                        Specialized export-grade multi-layer packaging ensures that fragile sanitaryware and delicate fittings reach your destination undamaged.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Export Section -->
+    <section id="global" class="py-24 bg-darkslate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-gold-400 font-semibold text-xs uppercase tracking-widest bg-gold-500/20 px-3.5 py-1 rounded-full border border-gold-500/30">Worldwide Reach</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold">Bridging Markets with Global Export Excellence</h2>
+                    <p class="text-gray-300 font-light leading-relaxed">
+                        Rion Impex connects world-class manufacturing standards with international trade demands. Our seamless logistics chain ensures prompt dispatch and hassle-free documentation for global buyers.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold-500 text-lg"></i>
+                            <span class="text-gray-200">Export-grade robust corrugated and wooden crating</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold-500 text-lg"></i>
+                            <span class="text-gray-200">Compliance with international quality standards</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold-500 text-lg"></i>
+                            <span class="text-gray-200">Efficient sea and air freight coordination</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20would%20like%20to%20discuss%20importing%20products." target="_blank" class="inline-flex items-center gap-3 bg-gold-500 hover:bg-gold-600 text-darkslate-900 font-bold px-8 py-4 rounded-xl transition shadow-lg">
+                            <i class="fab fa-whatsapp text-xl"></i> Connect for Export Inquiry
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-darkslate-800 p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-2xl space-y-6">
+                    <h3 class="text-2xl font-serif font-bold text-gold-400 border-b border-gray-700 pb-4">Quick Export Assistance</h3>
+                    <form id="export-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Your Name</label>
+                            <input type="text" required class="w-full bg-darkslate-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Country / Location</label>
+                            <input type="text" required class="w-full bg-darkslate-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition" placeholder="e.g. United Arab Emirates">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Requirement Details</label>
+                            <textarea rows="3" required class="w-full bg-darkslate-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition" placeholder="Mention product category & quantity..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-darkslate-900 font-bold py-3.5 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                            <span>Send via WhatsApp</span> <i class="fab fa-whatsapp text-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest bg-gold-100 px-3.5 py-1 rounded-full">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkslate-900">Contact Rion Impex</h2>
+                <p class="text-gray-600 font-light">Have questions about our products or export terms? Reach out to us directly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Contact Info Cards -->
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div class="bg-gold-100 text-gold-600 p-4 rounded-xl text-xl">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-darkslate-900 mb-1">Direct Phone / WhatsApp</h4>
+                            <a href="tel:8238226101" class="text-gray-600 hover:text-gold-600 transition font-medium">+91 82382 26101</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div class="bg-gold-100 text-gold-600 p-4 rounded-xl text-xl">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-darkslate-900 mb-1">Email Address</h4>
+                            <a href="mailto:info@rionimpex.com" class="text-gray-600 hover:text-gold-600 transition font-medium">info@rionimpex.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div class="bg-gold-100 text-gold-600 p-4 rounded-xl text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-darkslate-900 mb-1">Office Location</h4>
+                            <p class="text-gray-600 text-sm font-light">Global Exporter & Supplier, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 bg-gray-50 p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-sm">
+                    <h3 class="text-2xl font-serif font-bold text-darkslate-900 mb-6">Send Us a Message</h3>
+                    <form onsubmit="handleGeneralForm(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-600 mb-2 font-medium">Full Name</label>
+                                <input type="text" id="g-name" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:border-gold-500 transition" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-600 mb-2 font-medium">Phone Number / WhatsApp</label>
+                                <input type="text" id="g-phone" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:border-gold-500 transition" placeholder="+1 ...">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-600 mb-2 font-medium">Email Address</label>
+                            <input type="email" id="g-email" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:border-gold-500 transition" placeholder="name@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-600 mb-2 font-medium">Message / Inquiry</label>
+                            <textarea id="g-message" rows="4" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:border-gold-500 transition" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-darkslate-900 hover:bg-gold-600 hover:text-darkslate-900 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto">
+                            <span>Submit Inquiry</span> <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp & Call Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- Call Button -->
+        <a href="tel:8238226101" title="Call Us" class="bg-darkslate-900 hover:bg-gold-600 hover:text-darkslate-900 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918238226101?text=Hello%20Rion%20Impex,%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" title="Chat on WhatsApp" class="bg-green-600 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white animate-bounce">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-darkslate-900 text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <!-- Col 1 -->
+            <div class="space-y-4 md:col-span-1">
+                <div class="flex items-center gap-2">
+                    <div class="bg-gold-500 text-darkslate-900 p-2 rounded-xl font-serif font-bold text-lg">RI</div>
+                    <span class="text-xl font-serif font-bold text-white tracking-wide">RION IMPEX</span>
+                </div>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                    Exporters, importers, and global suppliers of premier bath & wellness products, sanitaryware, CP fittings, and advanced shower systems.
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="https://wa.me/918238226101" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-gold-500 hover:text-darkslate-900 text-white rounded-xl flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:8238226101" class="w-10 h-10 bg-gray-800 hover:bg-gold-500 hover:text-darkslate-900 text-white rounded-xl flex items-center justify-center transition"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:info@rionimpex.com" class="w-10 h-10 bg-gray-800 hover:bg-gold-500 hover:text-darkslate-900 text-white rounded-xl flex items-center justify-center transition"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="space-y-4">
+                <h4 class="text-white font-serif font-bold text-base tracking-wider uppercase">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
+                    <li><a href="#products" class="hover:text-gold-400 transition">Product Categories</a></li>
+                    <li><a href="#quality" class="hover:text-gold-400 transition">Quality Assurance</a></li>
+                    <li><a href="#global" class="hover:text-gold-400 transition">Global Export</a></li>
+                    <li><a href="#contact" class="hover:text-gold-400 transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="space-y-4">
+                <h4 class="text-white font-serif font-bold text-base tracking-wider uppercase">Product Categories</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#products" class="hover:text-gold-400 transition">Bath & Wellness</a></li>
+                    <li><a href="#products" class="hover:text-gold-400 transition">Sanitaryware Collections</a></li>
+                    <li><a href="#products" class="hover:text-gold-400 transition">CP Fittings & Faucets</a></li>
+                    <li><a href="#products" class="hover:text-gold-400 transition">Shower Systems & Panels</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="space-y-4">
+                <h4 class="text-white font-serif font-bold text-base tracking-wider uppercase">Contact Info</h4>
+                <div class="space-y-3 text-sm">
+                    <p class="flex items-center gap-2"><i class="fas fa-phone-alt text-gold-500"></i> +91 82382 26101</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-envelope text-gold-500"></i> info@rionimpex.com</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-globe text-gold-500"></i> www.rionimpex.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Rion Impex. All Rights Reserved.</p>
+            <p>Designed for Luxury Bath & Wellness Solutions.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Form Handling -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form handler redirecting to WhatsApp
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const inputs = e.target.querySelectorAll('input, textarea');
+            const name = inputs[0].value;
+            const country = inputs[1].value;
+            const message = inputs[2].value;
+
+            const text = `Hello Rion Impex,%0A*Export Inquiry*%0AName: ${encodeURIComponent(name)}%0ACountry: ${encodeURIComponent(country)}%0AMessage: ${encodeURIComponent(message)}`;
+            window.open(`https://wa.me/918238226101?text=${text}`, '_blank');
+        }
+
+        function handleGeneralForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('g-name').value;
+            const phone = document.getElementById('g-phone').value;
+            const email = document.getElementById('g-email').value;
+            const message = document.getElementById('g-message').value;
+
+            const text = `Hello Rion Impex,%0A*Website Contact Form*%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+            window.open(`https://wa.me/918238226101?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
